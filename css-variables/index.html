@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <h1>
+                Update CSS Variables<br />
+                with <span>JS</span>
+            </h1>
+            <div class="controller">
+                <div class="item spacing">
+                    <label for="spacing">Spacing</label>
+                    <input id="spacing" type="range" data-sizing="px" value="10" />
+                </div>
+                <div class="item blur">
+                    <label for="blur">Blur</label>
+                    <input id="blur" type="range" data-sizing="px" value="10" />
+                </div>
+                <div class="item base">
+                    <label for="base">BaseColor</label>
+                    <input id="base" type="color" value="#ffc600" />
+                </div>
+            </div>
+            <img class="target-image" src="./assets/images/image.jpg" alt="뉴욕">
+        </div>
+    </div>
+
+    <script src="./js/cssVariables.js"></script>
+</body>
+</html>
