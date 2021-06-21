@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="title-area">
+            <h1 class="title">JavaScript30 - DRUM</h1>
+            <p class="description">DOM & AUDIO</p>
+        </div>
+        <ul class="drum-list">
+            <li data-key="65" class="drum-item">
+                <h2>a</h2>
+                <p>clap</p>
+            </li>
+            <li data-key="83" class="drum-item">
+                <h2>s</h2>
+                <p>hihat</p>
+            </li>
+            <li data-key="68" class="drum-item">
+                <h2>d</h2>
+                <p>kick</p>
+            </li>
+            <li data-key="70" class="drum-item">
+                <h2>f</h2>
+                <p>openhat</p>
+            </li>
+            <li data-key="71" class="drum-item">
+                <h2>g</h2>
+                <p>boom</p>
+            </li>
+            <li data-key="72" class="drum-item">
+                <h2>h</h2>
+                <p>ride</p>
+            </li>
+            <li data-key="74" class="drum-item">
+                <h2>j</h2>
+                <p>snare</p>
+            </li>
+            <li data-key="75" class="drum-item">
+                <h2>k</h2>
+                <p>tom</p>
+            </li>
+            <li data-key="76" class="drum-item">
+                <h2>l</h2>
+                <p>tink</p>
+            </li>
+        </ul>
+        <div class="audio-area">
+            <!-- data-커스텀속성명 : 커스텀 속성 무엇이든 가능 -->
+            <audio data-key="65" src="./assets/audio/clap.wav"></audio>
+            <audio data-key="83" src="./assets/audio/hihat.wav"></audio>
+            <audio data-key="68" src="./assets/audio/kick.wav"></audio>
+            <audio data-key="70" src="./assets/audio/openhat.wav"></audio>
+            <audio data-key="71" src="./assets/audio/boom.wav"></audio>
+            <audio data-key="72" src="./assets/audio/ride.wav"></audio>
+            <audio data-key="74" src="./assets/audio/snare.wav"></audio>
+            <audio data-key="75" src="./assets/audio/tom.wav"></audio>
+            <audio data-key="76" src="./assets/audio/tink.wav"></audio>
+        </div>
+    </div>
+
+    <script src="./js/drum.js"></script>
+</body>
+</html>
