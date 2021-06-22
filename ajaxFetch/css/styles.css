@@ -1,0 +1,53 @@
+html {
+    font-size: 2vw;
+}
+
+body {
+    background: rgb(255, 148, 148);
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.wrap .search-input {
+    width: 15rem;
+    border: 0.3rem solid rgb(255, 100, 100);
+    border-radius: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 0.3em;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.wrap .search-list .search-item {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    background: rgb(255, 175, 175);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+.wrap .search-list .search-item:nth-child(2n) {
+    perspective: 70px;
+    transform: perspective(100px) rotateX(3deg) translateY(-1px) scale(1.001);
+}
+.wrap .search-list .search-item:nth-child(2n-1) {
+    perspective: 70px;
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+}
+.wrap .search-list .search-item span {
+    font-size: 0.8rem;
+}
+.wrap .search-list .search-item span.hl {
+    background: rgb(255, 252, 73);
+}
+.wrap .search-list .search-item > span:last-child {
+    margin-left: auto;
+    font-size: 0.5rem;
+}
