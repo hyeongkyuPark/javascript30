@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg</title>
+</head>
+<body>
+    <h1>Enter 'easter' on your keyboard</h1>
+    <script>
+        const keys = [];
+        const secretCode = 'easter';
+
+        window.addEventListener('keyup', function(e) {
+            keys.push(e.key)
+
+            if(keys.length > secretCode.length) {
+                keys.splice(-secretCode.length-1, keys.length - secretCode.length);
+            }
+
+            const isEaster = keys.join('').includes(secretCode);
+            
+            if(isEaster) {
+                const colorCode = `#${Math.round(Math.random() * 0xffffff).toString(16)}`;
+                document.body.style.backgroundColor = colorCode;
+            }
+        });
+    </script>
+</body>
+</html>
