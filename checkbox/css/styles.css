@@ -1,0 +1,48 @@
+html {
+    font-size: 2vw;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: cadetblue;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap h1 {
+    margin-bottom: 1em;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.wrap .check-list {
+    background: #fff;
+    box-shadow: 10px 5px 5px rgba(120, 120, 120, 0.5);
+}
+.wrap .check-list .check-item {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+.wrap .check-list .check-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.wrap .check-list .check-item input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+.wrap .check-list .check-item label {
+    padding: 1rem;
+    margin-left: 1rem;
+    border-left: 1px solid #eee;
+}
+.wrap .check-list .check-item label.active {
+    text-decoration: line-through;
+}
