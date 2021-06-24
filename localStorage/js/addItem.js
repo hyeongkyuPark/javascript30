@@ -30,7 +30,7 @@
     }
 
     const toggleDone = function (e) {
-        if (!e.target.matches('input')) return; // input가 아니면 미작동 (델리게이션)
+        if (!e.target.matches('input')) return; // input가 아니면 미작동 (델리게이션, 이벤트 위임)
         const el = e.target;
         const index = el.dataset.index;
         items[index].done = !items[index].done;
