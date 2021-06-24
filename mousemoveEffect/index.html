@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseMove Effect</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>☄️SHADOW</h1>
+    </div>
+
+    <script>
+        const hero = document.querySelector('.hero');
+        const text = hero.querySelector('h1');
+        const walk = 100; // 100px
+
+        function shadow(e) {
+            const width = hero.offsetWidth;
+            const height = hero.offsetHeight;
+            let x = e.offsetX;
+            let y = e.offsetY;
+
+            if (this != e.target) {
+                x = x + e.target.offsetLeft;
+                y = y + e.target.offsetTop;
+            }
+
+            const xWalk = (x / width * walk) - (walk / 2);
+            const yWalk = (y / height * walk) - (walk / 2);
+            console.log(y);
+
+            text.style.textShadow = `
+                ${xWalk}px ${yWalk}px rgba(255, 0, 255, 0.7),
+                ${xWalk}px ${-yWalk}px rgba(255, 255, 0.7),
+                ${-xWalk}px ${-yWalk}px rgba(0, 0, 255, 0.7),
+                ${-xWalk}px ${yWalk}px rgba(0, 255, 255, 0.7)
+            `;
+
+        }
+
+        hero.addEventListener('mousemove', shadow);
+    </script>
+</body>
+
+</html>
