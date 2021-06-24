@@ -1,0 +1,42 @@
+body {
+    background: url('https://cdn.pixabay.com/photo/2015/06/30/18/36/st-826688_960_720.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrap h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #fff;
+}
+.wrap .content-box {
+    padding: 30px;
+    box-shadow: 5px 5px 10px #000;
+    background: #fff;
+}
+.wrap .content-box h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-align: center;
+}
+.wrap .content-box .plates {
+    margin-bottom: 20px;
+}
+.wrap .content-box .plates li {
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+.wrap .content-box .plates li input[type="checkbox"]:checked ~ label {
+    background: rgb(96, 205, 255);
+}
+.wrap .content-box .add-item input {
+    padding: 10px;
+}
