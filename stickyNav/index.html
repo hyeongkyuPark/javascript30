@@ -85,7 +85,7 @@
 
     <script>
         const nav = document.querySelector('nav');
-        const navTop = nav.getBoundingClientRect().top + window.pageYOffset;
+        const navTop = nav.getBoundingClientRect().top + window.pageYOffset; // 절대위치 구하기
 
         const navFixed = function(e) {
             const scrollTop = window.pageYOffset;
